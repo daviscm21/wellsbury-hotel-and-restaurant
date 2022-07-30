@@ -1,0 +1,33 @@
+.viewcart {
+    right: 10px; 
+    bottom: 70px; 
+    position: fixed; 
+    height: 26px; 
+    width: 107px; 
+    z-index: 1; 
+  
+}
+
+.viewcart .basket {
+    padding-left: 30px;
+    padding-bottom: 10px;  
+
+}
+
+@media only screen and (min-width: 420px) {
+    .viewcart {
+        right: 20px; 
+        bottom: 80px; 
+      
+    }
+
+}
+
+@media only screen and (min-width: 1030px) {
+    .viewcart {
+        right: 30px; 
+        bottom: 80px; 
+      
+    }
+
+}

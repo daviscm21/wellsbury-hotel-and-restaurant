@@ -19,65 +19,27 @@ var pool = new Pool({
 });
 } 
 
-const findExhibition = async (req, res) => {
-  const region = req.query.region;   
-  const period = req.query.period; 
-  const type = req.query.type; 
-  const exhibitiontype = req.query.exhibitiontype; 
+const getProducts = async (req, res) => {
+const area = req.params.area; 
+const query = 'SELECT * FROM products WHERE area = $1'
 
-  const query1 = 'SELECT * FROM ' + exhibitiontype + ' WHERE region = $1 AND period = $2'; 
-  const query2 = 'SELECT * FROM ' + exhibitiontype + ' WHERE type = $1'; 
+try{
 
-  try{
-    if(region && period){
-      const exhibitions = await pool.query(query1, [region, period]);  
-      res.status(201).send({
-        status: 'Success',
-        data: exhibitions.rows[0],
-        
-      })
-    }
-    else if(type){
-      const exhibitions = await pool.query(query2, [type]);  
-      res.status(201).send({
-        status: 'Success',
-        data: exhibitions.rows[0],
-        })
-    }
+    const products = await pool.query(query, [area]);  
+    res.status(201).send({
+      status: 'Success',
+      data: products.rows,
+      
+    })
+
+
 
 } catch(err) {
-  return res.status(500).send({
-    error: err.message
-  });
+return res.status(500).send({
+  error: err.message
+});
 }
+
 }
 
-let donationIdCounter = 1; 
-
-const makeDonation = async (req, res) => {
-    const {firstname, surname, amount} = req.body; 
-    const query = 'INSERT INTO donations (id, firstname, surname, amount, time) VALUES ($1, $2, $3, $4, $5)'; 
-
-  try{
-    let id = donationIdCounter++;  
-
-  // Gets today's date
-    var today = new Date();
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var datetime = date+' '+time;
-    
-    const newDonation = await pool.query(query, [id, firstname, surname, amount, datetime]);  
-    res.status(201).send({
-			status: 'Success',
-			message: 'New donation made',
-			data: newDonation.rows[0],
-			})
-  } catch(err) {
-    return res.status(500).send({
-			error: err.message
-		});
-  }
-} 
-
-module.exports = { findExhibition, makeDonation }
+module.exports = { getProducts }

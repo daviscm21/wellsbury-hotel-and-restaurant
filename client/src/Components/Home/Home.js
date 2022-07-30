@@ -1,45 +1,67 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Link } from 'react-router-dom'; 
-import './Home.css'; 
+import React, { useState, useEffect } from "react";
+import { NavLink } from 'react-router-dom';
+import './home.css';
 
-class Home extends React.Component {
+const Home = (props) => {
+    useEffect(() => {
+        props.setArea(''); 
+    
+      }, []) 
+                  
 
-    render(){
-        return (
-
-            <div className='links'>
-                <Link className='individual-link' exact to='/history'>
-                  <img src='https://cdn.pixabay.com/photo/2019/07/14/09/36/palace-4336616_1280.jpg' alt='history museum'/>
-                  <div className='individual-link-text'>
-                    <h2>History</h2>
-                    <p>Explore our range of Historical exhibitions</p>
-                  </div>
-                </Link>
-                <Link className='individual-link' exact to='/art'>
-                  <img src='https://cdn.pixabay.com/photo/2019/05/31/13/35/art-gallery-4242219__340.jpg' alt='an art gallery'/>
-                  <div className='individual-link-text'>
-                    <h2>Art</h2>
-                    <p>Explore our range of Art exhibitions</p>
-                  </div>
-                </Link>
-                <Link className='individual-link' exact to='/natural-history'>
-                  <img src='https://cdn.pixabay.com/photo/2019/10/29/14/29/natural-history-museum-4587057__480.jpg' alt='a dinosaur skeleton in a museum'/>
-                  <div className='individual-link-text'>
-                    <h2>Natural History</h2>
-                    <p>Explore our range of Natural History exhibitions</p>
-                  </div>
-                </Link>
-                <Link className='individual-link' exact to='/science'>
-                  <img src='https://cdn.pixabay.com/photo/2018/08/12/19/17/museum-of-science-and-technology-3601470__340.jpg' alt='exhibitions in a science museum'/>
-                  <div className='individual-link-text'>
-                    <h2>Science</h2>
-                    <p>Explore our range of Science exhibitions</p>
-                  </div>
-                </Link>
+          return(
+            <div className='home'>
+                <div className='about'>
+                <p>
+                    At Wellsbury Furniture Store we pride ourselves on our high quality furniture at affordable prices. 
+                    Browse our range of products on our website or come in to our store where one of our sales agents will be happy to help. 
+                </p>
+                </div>
+                <div className='NavLinkDivs'>
+                <div className='NavLinkDiv'>
+               <NavLink to='/bedroom' className='NavLink'>
+                <div className='NavLinkContent'>
+                <img src='https://cdn.pixabay.com/photo/2014/07/10/17/17/bedroom-389254_1280.jpg' alt='bedroom'></img>
+                <p>Bedroom</p>
+                </div>
+                </NavLink> 
+              </div>
+              <div className='NavLinkDiv'>
+               <NavLink to='/living-room' className='NavLink'>
+                <div className='NavLinkContent'>
+                <img src='https://cdn.pixabay.com/photo/2017/01/07/17/48/interior-1961070_1280.jpg' alt='Living Room'></img>
+                <p>Living Room</p>
+                </div>
+                </NavLink> 
+              </div>
+              <div className='NavLinkDiv'>
+               <NavLink to='/dining-room' className='NavLink'>
+                <div className='NavLinkContent'>
+                <img src='https://cdn.pixabay.com/photo/2017/06/13/22/42/kitchen-2400367__340.jpg' alt='Dining Room'></img>
+                <p>Dining Room</p>
+                </div>
+                </NavLink> 
+              </div>
+              <div className='NavLinkDiv'>
+               <NavLink to='/office' className='NavLink'>
+                <div className='NavLinkContent'>
+                <img src='https://cdn.pixabay.com/photo/2014/04/26/00/41/office-332211_1280.jpg' alt='office'></img>
+                <p>Office</p>
+                </div>
+                </NavLink> 
+              </div>
+              <div className='NavLinkDiv'>
+               <NavLink to='/garden' className='NavLink'>
+                <div className='NavLinkContent'>
+                <img src='https://cdn.pixabay.com/photo/2017/06/27/07/48/armchair-2446560__480.jpg' alt='garden'></img>
+                <p>Garden</p>
+                </div>
+                </NavLink> 
+              </div>
+              </div>
             </div>
-         
+
         )
     }
-}
 
 export default Home ;

@@ -1,0 +1,22 @@
+.footer{
+    position: absolute; 
+    bottom: 0; 
+    text-align: center; 
+ 
+
+} 
+
+.footer p {
+    margin: 0; 
+    padding-left: 10px; 
+    padding-bottom: 10px; 
+    width: 55%; 
+    Font-Family: 'Raleway', Sans-Serif;
+}
+
+@media only screen and (min-width: 460px) {
+.footer p {
+    width: 100%; 
+}
+
+}
