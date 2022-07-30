@@ -1,1 +1,1 @@
-
+A project ecommerce website which is part of a larger personal project of creating small business websites for the fictional town of Wellsbury. I wanted to demonstrate how Paypal could be integrated with a postgresql database. The product information and paypal buttons are stored in the backend and displayed on each page using useeffect and window.location.pathname so as a user goes to a different page the products will change. This also means that new products can be added to the database and will then be displayed on the website. 
