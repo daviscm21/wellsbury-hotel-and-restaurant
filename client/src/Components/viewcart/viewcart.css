@@ -8,6 +8,12 @@
   
 }
 
+.viewcart form {
+    right: 18px; 
+    bottom: 2px; 
+    position: fixed;    
+}
+
 .viewcart .basket {
     padding-left: 30px;
     padding-bottom: 10px;  

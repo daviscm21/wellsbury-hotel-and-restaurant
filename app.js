@@ -18,7 +18,7 @@ app.use(expressCspHeader({
       'default-src': [SELF],
       'script-src': [SELF, INLINE, 'somehost.com'],
       'style-src': [SELF, 'fonts.googleapis.com'],
-      'img-src': ['data:', 'images.com'],
+      'img-src': ['data:', 'cdn.pixabay.com', 'www.sandbox.paypal.com', 'www.paypalobjects.com'],
       'font-src': ['fonts.gstatic.com'], 
       'worker-src': [NONE],
   }
