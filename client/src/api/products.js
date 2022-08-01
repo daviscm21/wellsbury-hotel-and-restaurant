@@ -1,9 +1,14 @@
-import { API_ENDPOINT } from ".";
+import axios from 'axios'
+
+axios.defaults.headers.common = {
+  "Content-Type": "application/json"
+}
+
+const baseUrl = 'api'; 
 
 export const getProducts = async (area) => {
 
-     const res = await fetch(`${API_ENDPOINT}/api/${area}`)
-     const products = await res.json(); 
-     return products.data;
+     const request = axios.get(`${baseUrl}/${area}`)
+     return request.then(response => response.data)
 
     }

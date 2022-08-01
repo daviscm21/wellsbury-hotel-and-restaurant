@@ -14,10 +14,24 @@
     position: fixed;    
 }
 
-.viewcart .basket {
+.viewcart .cart {
     padding-left: 30px;
     padding-bottom: 10px;  
+    right: 45px; 
+    bottom: 25px; 
+    position: fixed; 
+ 
+}
 
+.viewcart svg {
+    padding-left: 30px;
+    padding-bottom: 10px;  
+    right: 45px; 
+    bottom: 25px; 
+    position: fixed; 
+    height: 52px; 
+    width: 50px; 
+ 
 }
 
 @media only screen and (min-width: 420px) {
