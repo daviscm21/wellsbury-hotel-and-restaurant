@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {getProducts} from '../../api/products'; 
 import './area.css';
+import ReactHtmlParser from 'react-html-parser';
 const parse = require('html-react-parser');
 
 const Area = (props) => {
@@ -46,10 +47,10 @@ return newString;
                    <img src={product.image} alt={product.name}></img>
                    <h2>{capitalizeFirstLetter(product.name)}</h2>
                    <p>£{product.cost}</p>
-                   <div>{parse(String(product.paypal))}</div>
+                   <div>{ReactHtmlParser(product.paypal)}</div>               
+
                </div>})
                }
-
                </div>
             </div>
 
