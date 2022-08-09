@@ -1,0 +1,64 @@
+.restaurant {
+    padding-bottom: 20px; 
+    text-align: center; 
+
+}
+
+.restaurantSearchBar {
+    background-color: pink;   
+    text-align: center;  
+    margin: 20px 5% 0; 
+}
+
+.restaurant h2 {
+    Font-Family: 'Cormorant Garamond', Serif;
+    Font-Size: 30px;
+    margin-top: 0;
+    padding-top: 20px; 
+}
+
+.restaurant select {
+    margin: 10px; 
+}
+
+.restaurant input {
+    margin: 10px; 
+}
+
+.meals {
+    background-color: pink;  
+    margin: 20px 5%; 
+    padding: 10px 0;  
+}
+
+.meals h3 {
+    font-size: 30px;
+    Font-Family: 'Cormorant Garamond', Serif; 
+}
+
+.meals p {
+margin-left: 5%; 
+margin-right: 5%; 
+
+}
+
+.meals img {
+    width: 70%; 
+}
+
+
+@media only screen and (min-width: 700px) {
+
+    .restaurantSearchBar, .meals {
+        margin-left: 10%; 
+        margin-right: 10%; 
+    }
+
+    .meals img {
+        width: 50%; 
+    }
+
+    .meal {
+        padding-bottom: 50px; 
+    }
+}

@@ -1,0 +1,52 @@
+.bookingsdiv {
+    width: 90%; 
+    background-color: pink; 
+    margin: 0 5% 0;     
+}
+
+.bookings {
+    width: 235px;  
+    background-color: pink; 
+    padding: 5%; 
+    margin: 20px auto 0; 
+}
+
+.bookings h3{
+    margin: 0 0 15px; 
+    Font-Family: 'Fira Sans', Sans-Serif;   
+}
+
+.bookings label {
+    Font-Family: 'Fira Sans', Sans-Serif;
+Font-Size: 16px;
+}
+
+.bookings input[id='firstname'] {
+    margin-bottom: 10px; 
+}
+
+.bookings h4 {
+    margin: 30px 0 10px; 
+    Font-Family: 'Fira Sans', Sans-Serif;
+}
+
+.bookings input[id='from']{
+   margin-left: 10px;  
+   margin-bottom: 10px; 
+}
+
+.bookings input[id='nights']{
+    margin-left: 10px;  
+    margin-bottom: 10px; 
+ }
+
+ .bookings input[type='submit']{
+    Font-Family: 'Fira Sans', Sans-Serif;
+    margin-left: auto; 
+    margin-right: auto;  
+    width: 65px; 
+    position: relative; 
+    left: -32.5px;   
+    margin-left: 50%; 
+    margin-right: 50%; 
+ }

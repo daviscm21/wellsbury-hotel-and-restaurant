@@ -1,0 +1,15 @@
+.hotel {
+    margin-top: 20px;  
+    padding-bottom: 30px; 
+}
+
+.hotel h2 {
+    Font-Family: 'Cormorant Garamond', Serif;
+    Font-Size: 30px;
+    text-align: center; 
+    margin: 0 5% 0;
+    padding: 10px 0 0; 
+    background-color: pink; 
+    width: 90%; 
+}
+

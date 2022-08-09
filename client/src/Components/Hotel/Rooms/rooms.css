@@ -1,0 +1,19 @@
+.rooms h3 {
+    Font-Family: 'Fira Sans', Sans-Serif;
+    Font-Size: 17px;
+    text-align: center; 
+    margin: 0; 
+    padding: 10px 0 30px; 
+    background-color: pink; 
+    width: 90%; 
+    margin: 0 5%; 
+}
+
+@media only screen and (min-width: 520px) {
+.rooms img {
+    width: 70%; 
+    margin-left: 15%; 
+    margin-right: 15%; 
+}
+
+}

@@ -1,22 +1,9 @@
-.footer{
+.footer p{
+    font-size: 14px; 
+    margin: 0; 
+    background-color: rgb(194, 60, 194);
+    color: rgb(230, 230, 230); 
     position: absolute; 
     bottom: 0; 
-    text-align: center; 
- 
-
-} 
-
-.footer p {
-    margin: 0; 
-    padding-left: 10px; 
-    padding-bottom: 10px; 
-    width: 55%; 
-    Font-Family: 'Raleway', Sans-Serif;
-}
-
-@media only screen and (min-width: 460px) {
-.footer p {
     width: 100%; 
-}
-
-}
+} 

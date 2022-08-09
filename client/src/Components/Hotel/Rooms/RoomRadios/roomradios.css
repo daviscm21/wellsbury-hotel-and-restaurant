@@ -1,0 +1,19 @@
+.roomradios {
+display: flex; 
+justify-content: center; 
+padding-bottom: 30px; 
+background-color: pink; 
+width: 90%; 
+margin: 0 5% 20px; 
+}
+
+.roomradios label {
+    Font-Family: 'Fira Sans', Sans-Serif;
+    Font-Size: 17px;
+
+}
+
+.roomradios input {
+    margin-bottom: 20px; 
+    color: black; 
+}

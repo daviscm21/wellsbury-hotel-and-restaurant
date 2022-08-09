@@ -18,7 +18,7 @@ app.use(expressCspHeader({
       'default-src': [SELF],
       'script-src': [SELF, INLINE, 'somehost.com'],
       'style-src': [SELF, 'fonts.googleapis.com'],
-      'img-src': ['data:', 'cdn.pixabay.com', 'www.sandbox.paypal.com', 'www.paypalobjects.com'],
+      'img-src': ['data:', 'cdn.pixabay.com', 'upload.wikimedia.org', 'localhost:5000', 'wellsbury-hotel-and-restaurant.herokuapp.com'],
       'font-src': ['fonts.gstatic.com'], 
       'worker-src': [NONE],
   }
@@ -29,9 +29,19 @@ app.use(express.static('client/build')); // serve static files (css & js) from t
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/api/:area', (req, res) => { 
+app.get('/menu', (req, res) => { 
 
-  services.getProducts(req, res);
+  services.getMeal(req, res);
+});
+
+app.post('/bookings', (req, res) => { 
+
+  services.bookRoom(req, res);
+});
+
+app.get('/rooms', (req, res) => { 
+
+  services.getRoom(req, res);
 });
 
 app.get("*", function (req, res) {

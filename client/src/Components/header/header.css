@@ -1,96 +1,29 @@
-.header {
-padding: 0; 
-text-align: center; 
-
-}
-
 .header h1 {
-margin: 0; 
-padding: 20px 10px;  
-background-color: rgb(82, 122, 254);
-color: rgb(243, 243, 243); 
-Font-Family: 'Vollkorn', Serif;
- 
+    Font-Family: 'Cormorant Garamond', Serif;
+    Font-Size: 45px;
+    text-align: center; 
+    color: rgb(230, 230, 230); 
+    background-color: purple; 
+    margin: 0; 
+    padding: 20px 0; 
 }
 
-.header p{
-    background-color: rgb(82, 122, 254);
-    color: white; 
-    margin: 0;  
-    padding-bottom: 10px;   
-}
-
-.header .navbar {
-    padding: 10px 0 10px; 
-    background-color: rgb(82, 188, 254);
-
-}
-
-.header .navbar {
-    margin:  0; 
-    text-decoration: none; 
-}
-
-.header .navbar button {
-    font-size: 20px; 
-    width: 200px; 
-    height: 30px; 
-    background-color: rgb(0, 175, 0); 
-    border: none; 
-    border-radius: 10px;
-    color: white; 
-    Font-Family: 'Vollkorn', Serif;
-    margin: 10px 0; 
-}
-
-.header .navbar button:hover {
-  cursor:pointer; 
-}
-
-.header .navbar .NavLinkDiv {
-    margin: 10px 0; 
+.header nav {
+    Font-Family: 'Cormorant Garamond', Serif;
+    Font-Size: 25px;
+    display: flex; 
+    justify-content: space-around; 
+    background-color: rgb(194, 60, 194);
+    padding: 10px 0; 
 
 }
 
-.header .navbar .NavLink {
-    text-decoration: none;
-    color: black; 
-    Font-Family: 'Vollkorn', Serif;
-
+.header .NavLink {
+color: rgb(230, 230, 230);  
+text-decoration: none;
 }
 
-.header .navbar .NavLink:hover {
-    text-decoration: underline; 
-
-}
-
-@media only screen and (min-width: 500px) {
-    .NavLinks {
-        display: flex; 
-        justify-content: space-around; 
-    }
-}
-
-@media only screen and (min-width: 540px) {
-    .header h1 {
-        font-size: 40px; 
-         
-        }
-
-}
-
-@media only screen and (min-width: 800px) {
-    .header h1 {
-        font-size: 50px; 
-         
-        }
-
-}
-
-@media only screen and (min-width: 800px) {
-    .header .navbar .NavLink {
-     font-size: 20px; 
-    
-    }
+.header .NavLink:hover {
+text-decoration: underline; 
 
 }
